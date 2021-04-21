@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoogleTagManagerModule } from './angular-google-tag-manager.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleTagManagerModule.forRoot({
+      id: 'GTM-N42QKMT',
+      // gtm_auth: YOUR_GTM_AUTH,
+      // gtm_preview: YOUR_GTM_ENV
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
